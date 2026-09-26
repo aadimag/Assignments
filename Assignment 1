@@ -1,1 +1,61 @@
+#1. LIST of students
+student_list = ["Amit", "Riya", "Sahil"]
+
+print("Initial List:", student_list)
+
+# ADD
+student_list.append("Neha")
+print("After Add:", student_list)
+
+# UPDATE (replace element at index 1)
+student_list[1] = "Riya Sharma"
+print("After Update:", student_list)
+
+# DELETE
+student_list.remove("Sahil")
+print("After Delete:", student_list)
+
+
+#2. TUPLE of students
+# Tuples are immutable, so "add/update/delete" means creating a NEW tuple each time
+student_tuple = ("Amit", "Riya", "Sahil")
+ 
+print("Initial Tuple:", student_tuple)
+
+# ADD (convert to list, add, convert back)
+temp = list(student_tuple)
+temp.append("Neha")
+student_tuple = tuple(temp)
+print("After Add:", student_tuple)
+
+# UPDATE (index 1)
+temp = list(student_tuple)
+temp[1] = "Riya Sharma"
+student_tuple = tuple(temp)
+print("After Update:", student_tuple)
+
+# DELETE
+temp = list(student_tuple)
+temp.remove("Sahil")
+student_tuple = tuple(temp)
+print("After Delete:", student_tuple)
+
+
+# 3. DICTIONARY of students
+# roll_no : name
+student_dict = { 1: "Amit", 2: "Riya", 3: "Sahil"}
+
+print("Initial Dictionary:", student_dict)
+
+# ADD
+student_dict[4] = "Neha"
+print("After Add:", student_dict)
+
+# UPDATE
+student_dict[2] = "Riya Sharma"
+print("After Update:", student_dict)
+
+# DELETE
+del student_dict[3]
+print("After Delete:", student_dict)
 
