@@ -1,3 +1,5 @@
+#To create a dictionary tuple and list of students and perform the following operations: add, delete, update
+
 #1. LIST of students
 student_list = ["Amit", "Riya", "Sahil"]
 
