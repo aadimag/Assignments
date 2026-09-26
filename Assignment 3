@@ -30,6 +30,7 @@ def main():
         print("The triangle is NOT right-angled.")
 
 
+
 if __name__ == "__main__":
     main()
 
