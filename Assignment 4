@@ -1,1 +1,39 @@
+# Matrix Addition using Python Lists
 
+def input_matrix(rows, cols, name):
+    print(f"Enter elements of Matrix {name} ({rows}x{cols}):")
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            val = int(input(f"Element [{i}][{j}]: "))
+            row.append(val)
+        matrix.append(row)
+    return matrix
+
+def add_matrices(A, B, rows, cols):
+    result = [[0 for _ in range(cols)] for _ in range(rows)]
+    for i in range(rows):
+        for j in range(cols):
+            result[i][j] = A[i][j] + B[i][j]
+    return result
+
+def display_matrix(matrix):
+    for row in matrix:
+        print(row)
+
+
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+A = input_matrix(rows, cols, "A")
+B = input_matrix(rows, cols, "B")
+
+C = add_matrices(A, B, rows, cols)
+
+print("\nMatrix A:")
+display_matrix(A)
+print("\nMatrix B:")
+display_matrix(B)
+print("\nSum of Matrix A and B:")
+display_matrix(C)
