@@ -1,1 +1,35 @@
+# To accept the length of the three sides of a triangle as input the program should indicate whether or not thr triangle is a right angled triangle using functions
+def get_sides():
+    """Take the three side lengths as input from the user."""
+    a = int(input("Enter the first side: "))
+    b = int(input("Enter the second side: "))
+    c = int(input("Enter the third side: "))
+    return a, b, c
+
+
+def is_valid_triangle(a, b, c):
+    return (a + b > c) and (b + c > a) and (a + c > b)
+
+
+def is_right_angled(a, b, c):
+    sides = sorted([a, b, c])   # smallest to largest
+    x, y, z = sides
+    return (x**2 + y**2) == z**2
+
+
+def main():
+    a, b, c = get_sides()
+
+    if not is_valid_triangle(a, b, c):
+        print("These sides do not form a valid triangle.")
+        return
+
+    if is_right_angled(a, b, c):
+        print("The triangle IS right-angled.")
+    else:
+        print("The triangle is NOT right-angled.")
+
+
+if __name__ == "__main__":
+    main()
 
